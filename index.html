@@ -46,21 +46,31 @@
             margin-bottom: 15px;
         }
 
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
         .buttons a {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: #1e90ff;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            font-size: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             transition: 0.3s;
         }
 
+        .buttons a img {
+            width: 30px;
+            height: 30px;
+        }
+
         .buttons a:hover {
-            background: #0f6cd4;
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
 
         .image-box {
@@ -82,9 +92,15 @@
         <h1>Witaj na mojej stronie!</h1>
         <p>Znajdziesz mnie tutaj:</p>
         <div class="buttons">
-            <a href="https://github.com/MrFratczak" target="_blank">🔹 GitHub</a>
-            <a href="https://discordapp.com/users/864948534289629214" target="_blank">💬 Discord</a>
-            <a href="https://www.tiktok.com/@k4p1chu_" target="_blank">🎵 TikTok</a>
+            <a href="https://github.com/MrFratczak" target="_blank" style="background: #333;">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="https://discordapp.com/users/864948534289629214" target="_blank" style="background: #5865F2;">
+                <img src="discord.png" alt="Discord">
+            </a>
+            <a href="https://www.tiktok.com/@k4p1chu_" target="_blank" style="background: #000;">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
         </div>
         <div class="image-box">
             <img src="cashman.png" alt="Zdjęcie">
