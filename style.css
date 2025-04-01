@@ -72,3 +72,10 @@ h1 {
     height: 24px;
     margin-right: 8px;
 }
+.email {
+    background: #d44638; /* Czerwony kolor jak Gmail */
+}
+
+.email i {
+    font-size: 24px; /* Rozmiar ikony */
+}
