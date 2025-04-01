@@ -79,3 +79,43 @@ h1 {
 .email i {
     font-size: 24px; /* Rozmiar ikony */
 }
+/* Animowany gradient tła */
+body {
+    background: linear-gradient(-45deg, #1e1e1e, #292929, #3a3a3a, #1e1e1e);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Animacja gradientu */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Efekt cząsteczek */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Reszta stylów */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin: 50px auto;
+    background: rgba(43, 43, 43, 0.8); /* Lekko przezroczyste tło */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
