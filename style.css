@@ -67,10 +67,6 @@ h1 {
 .social:hover {
     opacity: 0.8;
 }
-.social i {
-    font-size: 24px; /* Zmniejszamy ikonki */
-}
-
 .social img {
     width: 24px; /* Jeśli używasz obrazków zamiast FontAwesome */
     height: 24px;
