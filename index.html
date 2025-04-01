@@ -4,106 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #121212;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        .container {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out;
-            width: 350px;
-        }
-
-        .container:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .buttons a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #1e90ff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            transition: 0.3s;
-        }
-
-        .buttons a img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .buttons a:hover {
-            transform: scale(1.2);
-        }
-
-        .image-box {
-            margin-top: 20px;
-            border: 5px solid #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .image-box img {
-            width: 100%;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Witaj na mojej stronie!</h1>
-        <p>Znajdziesz mnie tutaj:</p>
-        <div class="buttons">
-            <a href="https://github.com/MrFratczak" target="_blank" style="background: #333;">
-                <img src="github.png" alt="GitHub">
-            </a>
-            <a href="https://discordapp.com/users/864948534289629214" target="_blank" style="background: #5865F2;">
-                <img src="discord.png" alt="Discord">
-            </a>
-            <a href="https://www.tiktok.com/@k4p1chu_" target="_blank" style="background: #000;">
-                <img src="tiktok.png" alt="TikTok">
-            </a>
-        </div>
-        <div class="image-box">
-            <img src="cashman.png" alt="Zdjęcie">
+        <div class="profile">
+            <img src="juicewrld.jpg" alt="Profilowe" class="avatar">
+            <h1>K4p1chu</h1>
+            <p>Znajdziesz mnie tutaj:</p>
+            <div class="social-links">
+                <a href="https://github.com/MrFratczak" class="github" target="_blank">GitHub</a>
+                <a href="https://discordapp.com/users/864948534289629214" class="discord" target="_blank">Discord</a>
+                <a href="https://www.tiktok.com/@k4p1chu_" class="tiktok" target="_blank">TikTok</a>
+            </div>
         </div>
     </div>
 </body>
