@@ -67,3 +67,8 @@ h1 {
 .social:hover {
     opacity: 0.8;
 }
+.social img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
