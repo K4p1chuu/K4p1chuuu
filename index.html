@@ -31,20 +31,58 @@
             
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <canvas id="rainCanvas"></canvas>
+
     <script>
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 150 }, /* Więcej cząsteczek */
-            size: { value: 4 }, /* Większe cząsteczki */
-            move: { speed: 3 }, /* Szybszy ruch */
-            opacity: { value: 0.8 }, /* Bardziej widoczne */
-            color: { value: "#ffffff" },
-            line_linked: { enable: true, distance: 120, color: "#ffffff" }
+    const canvas = document.getElementById("rainCanvas");
+    const ctx = canvas.getContext("2d");
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const raindrops = [];
+    const numDrops = 150; // Ilość kropli
+    
+    // Tworzenie kropli deszczu
+    for (let i = 0; i < numDrops; i++) {
+        raindrops.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            speed: Math.random() * 5 + 2, // Prędkość opadania
+            length: Math.random() * 20 + 10 // Długość kropli
+        });
+    }
+    
+    // Animacja deszczu
+    function drawRain() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = "rgba(174, 194, 224, 0.6)";
+        ctx.lineWidth = 2;
+    
+        for (let drop of raindrops) {
+            ctx.beginPath();
+            ctx.moveTo(drop.x, drop.y);
+            ctx.lineTo(drop.x, drop.y + drop.length);
+            ctx.stroke();
+    
+            drop.y += drop.speed;
+            if (drop.y > canvas.height) {
+                drop.y = -drop.length;
+                drop.x = Math.random() * canvas.width;
+            }
         }
+        requestAnimationFrame(drawRain);
+    }
+    
+    // Rozpoczęcie animacji
+    drawRain();
+    
+    // Dynamiczne skalowanie okna
+    window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     });
     </script>
     
 </body>
-<div id="particles-js"></div>
 </html>
