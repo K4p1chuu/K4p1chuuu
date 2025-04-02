@@ -47,52 +47,6 @@
             
         </div>
     </div>
-    <canvas id="rainCanvas"></canvas>
-
-    <script>
-    const canvas = document.getElementById("rainCanvas");
-    const ctx = canvas.getContext("2d");
-    
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    const raindrops = [];
-    const numDrops = 150; 
-    
-   
-    for (let i = 0; i < numDrops; i++) {
-        raindrops.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            speed: Math.random() * 5 + 2, 
-            length: Math.random() * 20 + 10 
-        });
-    }
-    
-
-    function drawRain() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = "rgba(174, 194, 224, 0.6)";
-        ctx.lineWidth = 2;
-    
-        for (let drop of raindrops) {
-            ctx.beginPath();
-            ctx.moveTo(drop.x, drop.y);
-            ctx.lineTo(drop.x, drop.y + drop.length);
-            ctx.stroke();
-    
-            drop.y += drop.speed;
-            if (drop.y > canvas.height) {
-                drop.y = -drop.length;
-                drop.x = Math.random() * canvas.width;
-            }
-        }
-        requestAnimationFrame(drawRain);
-    }
-    
-    
-    drawRain();
-    
   
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
