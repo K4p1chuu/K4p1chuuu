@@ -22,6 +22,7 @@
                 <p>Odwiedziny: <span id="visitCount">0</span></p>
             </div>
             
+            <button id="theme-toggle">🌙 Tryb Ciemny</button>
 
             <p>Znajdziesz mnie tutaj:</p>
         </div>
@@ -55,19 +56,19 @@
     canvas.height = window.innerHeight;
     
     const raindrops = [];
-    const numDrops = 150; // Ilość kropli
+    const numDrops = 150; 
     
-    // Tworzenie kropli deszczu
+   
     for (let i = 0; i < numDrops; i++) {
         raindrops.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            speed: Math.random() * 5 + 2, // Prędkość opadania
-            length: Math.random() * 20 + 10 // Długość kropli
+            speed: Math.random() * 5 + 2, 
+            length: Math.random() * 20 + 10 
         });
     }
     
-    // Animacja deszczu
+
     function drawRain() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.strokeStyle = "rgba(174, 194, 224, 0.6)";
@@ -88,10 +89,10 @@
         requestAnimationFrame(drawRain);
     }
     
-    // Rozpoczęcie animacji
+    
     drawRain();
     
-    // Dynamiczne skalowanie okna
+  
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -108,8 +109,8 @@
             document.getElementById('timezone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
         }
         
-        setInterval(updateTime, 1000); // Aktualizacja co sekundę
-        updateTime(); // Wywołanie od razu po załadowaniu
+        setInterval(updateTime, 1000); 
+        updateTime(); 
         </script>
         
         <script>
@@ -121,7 +122,24 @@
             });
             </script>
             
-
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.body.classList.add("loaded");
+                });
+                </script>
+                
+                <script>
+                    const button = document.getElementById("theme-toggle");
+                    button.addEventListener("click", function () {
+                        document.body.classList.toggle("light-mode");
+                        if (document.body.classList.contains("light-mode")) {
+                            button.textContent = "🌑 Tryb Ciemny";
+                        } else {
+                            button.textContent = "🌙 Tryb Jasny";
+                        }
+                    });
+                    </script>
+                    
 
 </body>
 </html>
