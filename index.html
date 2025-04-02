@@ -12,6 +12,17 @@
         <div class="profile">
             <img src="juicewrld.jpg" alt="Profilowe" class="avatar">
             <h1>K4p1chu</h1>
+            
+            <div class="timezone">
+                <p>Strefa czasowa: <span id="timezone"></span></p>
+                <p>Aktualny czas: <span id="currentTime"></span></p>
+            </div>
+            
+            <div class="visitor-counter">
+                <p>Odwiedziny: <span id="visitCount">0</span></p>
+            </div>
+            
+
             <p>Znajdziesz mnie tutaj:</p>
         </div>
 
@@ -87,5 +98,30 @@
     });
     </script>
     
+    <script>
+        function updateTime() {
+            let now = new Date();
+            let options = { timeZoneName: 'short' };
+            let timeString = now.toLocaleTimeString('pl-PL', options);
+            
+            document.getElementById('currentTime').textContent = timeString;
+            document.getElementById('timezone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        }
+        
+        setInterval(updateTime, 1000); // Aktualizacja co sekundę
+        updateTime(); // Wywołanie od razu po załadowaniu
+        </script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let visitCount = localStorage.getItem("visitCount") || 0;
+                visitCount++;
+                localStorage.setItem("visitCount", visitCount);
+                document.getElementById("visitCount").textContent = visitCount;
+            });
+            </script>
+            
+
+
 </body>
 </html>
