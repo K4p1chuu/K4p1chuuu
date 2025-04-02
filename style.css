@@ -111,5 +111,17 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
+.email {
+    background: #d44638; /* Czerwony kolor Gmaila */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email .icon {
+    width: 24px;  /* Zmniejszamy ikonę */
+    height: 24px;
+    margin-right: 10px;
+}
 
 
