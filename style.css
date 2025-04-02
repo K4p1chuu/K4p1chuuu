@@ -161,27 +161,27 @@ h1, h2, h3 {
 }
 @media screen and (max-width: 768px) {
     .container {
-        width: 90%; /* Zmniejszamy szerokość kontenera */
+        width: 90%; 
         padding: 20px;
     }
 
     .profile img {
-        width: 120px; /* Zmniejszamy profilowe zdjęcie */
+        width: 120px; 
         height: 120px;
     }
 
     h1 {
-        font-size: 22px; /* Mniejszy nagłówek */
+        font-size: 22px; 
     }
 
     .social-buttons a {
-        width: 90%; /* Przyciski na całą szerokość */
-        font-size: 16px; /* Większa czcionka w przyciskach */
+        width: 90%; 
+        font-size: 16px; 
     }
-
-    .lyrical-logo {
-        width: 60px; /* Mniejsze logo w rogu */
-    }
+}
+.music-widget {
+    text-align: center; 
+    margin-top: 20px;
 }
 
 

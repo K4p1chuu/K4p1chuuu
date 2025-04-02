@@ -20,7 +20,13 @@
                 <p>Time zone: <span id="timezone"></span></p>
                 <p>Current time: <span id="currentTime"></span></p>
             </div>
-            
+           
+            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" width="300"  
+        sandbox="allow-same-origin allow-scripts allow-popups"  
+        src="https://embed.music.apple.com/us/playlist/recently-played/pl.u-r2yBkNXCav">
+</iframe>
+
+
             <div class="visitor-counter">
                 <p>Visits: <span id="visitCount">0</span></p>
             </div>
@@ -76,7 +82,15 @@
                 document.addEventListener("DOMContentLoaded", function () {
                     document.body.classList.add("loaded");
                 });
-                </script>                 
-
+                </script>  
+                <div class="music-widget">
+                    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" 
+                            style="width:100%;max-width:660px;overflow:hidden;background:transparent;" 
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts 
+                            allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+                            src="https://embed.music.apple.com/pl/playlist/k4p1chuu/pl.u-gxblgd1TxrBpxLa">
+                    </iframe>
+                </div>
+                               
 </body>
 </html>
