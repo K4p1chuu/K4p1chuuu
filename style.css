@@ -159,6 +159,22 @@ h1, h2, h3 {
     font-weight: 600;
     letter-spacing: 1px;
 }
+.lyrical-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 80px;  
+}
+
+.lyrical-logo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.lyrical-logo img:hover {
+    transform: scale(1.1);
+}
 
 
 
