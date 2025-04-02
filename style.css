@@ -159,4 +159,29 @@ h1, h2, h3 {
     font-weight: 600;
     letter-spacing: 1px;
 }
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Zmniejszamy szerokość kontenera */
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 120px; /* Zmniejszamy profilowe zdjęcie */
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 22px; /* Mniejszy nagłówek */
+    }
+
+    .social-buttons a {
+        width: 90%; /* Przyciski na całą szerokość */
+        font-size: 16px; /* Większa czcionka w przyciskach */
+    }
+
+    .lyrical-logo {
+        width: 60px; /* Mniejsze logo w rogu */
+    }
+}
+
 
