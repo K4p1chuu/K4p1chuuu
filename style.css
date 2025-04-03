@@ -16,7 +16,7 @@ body {
 
 .avatar {
     width: 120px;
-    height: 120px;
+    min-height: 120px;
     border-radius: 50%;
     border: 3px solid white;
 }
@@ -87,7 +87,7 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 
@@ -179,9 +179,4 @@ h1, h2, h3 {
         font-size: 16px; 
     }
 }
-.music-widget {
-    text-align: center; 
-    margin-top: 20px;
-}
-
 
